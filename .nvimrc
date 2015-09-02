@@ -81,6 +81,12 @@ Plug 'kien/ctrlp.vim'
 Plug 'whatyouhide/vim-gotham'
 " Select and switch between buffers
 Plug 'jeetsukumaran/vim-buffergator'
+" Display tags in a side window
+Plug 'majutsushi/tagbar'
+" Lightning fast left-right movement
+Plug 'unblevable/quick-scope'
+" Hyperfocus writing
+Plug 'junegunn/limelight.vim'
 
 call plug#end()
 
@@ -128,6 +134,7 @@ function! NumberToggle()
 endfunction
 
 nnoremap <C-n> :call NumberToggle()<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Automatically use absolute line numbers when we're in insert mode
 " And relative numbers when we're in normal mode
@@ -404,5 +411,22 @@ map N <Plug>(easymotion-prev)
 " =================
 
 let g:ctrlp_working_path_mode = 'ra'
+
+" =================
+" Quick-Scope Mappings
+" =================
+
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" =================
+" Limelight Mappings
+" =================
+"
+nmap <silent> gl :Limelight!!<CR>
+xmap gl <Plug>(Limelight)
+let g:limelight_conceal_guifg = '#171717'
+let g:limelight_conceal_ctermfg = 238
+set scrolloff=999
 
 " vim:set ft=vim et sw=2:
