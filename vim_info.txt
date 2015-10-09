@@ -1,0 +1,73 @@
+-- Resize Windows --
+
+Height - :resize 50 or :res +5
+Width - :vertical resize 50 or +5
+
+-- Jump to previous/new cursor position --
+
+Last two positions - ''
+Go to older cursor position - Ctrl+o
+Go to newer cursor position - Ctrl+i
+Check jump list - :ju
+
+-- Character search within a line --
+
+Search forward - f, t
+Search backwards - F, T
+Search forward - ;
+Search backwards - ,
+
+-- Go to file under cursor --
+
+Keys - :gf
+Go back - Ctrl + O
+
+-- Tab forward/backwards in insert mode --
+
+Ctrl + I  - Forward
+Ctrl + D - Backwards
+
+-- Get current value of a setting in vim --
+
+Command - :echo &l:insert value here
+
+-- Copy a specific code block and place it at cursor location --
+
+Command - 12, 15co.
+
+-- Vim Tips --
+
+Word wise motions are 5x faster than h and l
+
+-- Change all characters on a line to uppercase --
+
+Command - g~
+
+-- Navigation tips --
+
+{  } - Move to the start/end of the paragraph or code block
+Ctrl + f, Ctrl + b - Move forward/backwards one screenful
+
+-- Search for word under cursor --
+
+Command - * or #
+
+-- Navigating while in insert mode --
+
+Command - Ctrl + o then enter commands as if you're in normal mode
+
+-- Find matching parentheses --
+
+Place cursor on any (,[,{ and type - Shift+%
+
+-- Capitalize letter under cursor --
+
+Command - ~
+
+-- Delete line without overriding the buffer --
+
+Command - "_dd
+
+-- Jump to the start and end of a code block --
+
+command - [ or ] then the given brace e.g. {()}
