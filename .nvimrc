@@ -154,6 +154,10 @@ set background=dark
 set number
 
 set cursorline
+hi CursorLine ctermbg=Yellow guibg=Yellow
+hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+
 " Set cursorline colors
 " hi CursorLine ctermbg=lightblue guibg=lightblue
 
@@ -280,10 +284,19 @@ nmap <leader>bq :bp <BAR> bd #<cr>
 " ===================
 
 " Disabling the arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" noremap <Up> <NOP>
+" noremap <Down> <NOP>
+" noremap <Left> <NOP>
+" noremap <Right> <NOP>
+
+" =====================================
+" Resizing window shortcuts
+" =====================================
+
+noremap <up>    <C-W>+
+noremap <down>  <C-W>-
+noremap <left>  3<C-W><
+noremap <right> 3<C-W>>
 
 " ===================
 " Neatstatus Settings
@@ -412,12 +425,9 @@ map N <Plug>(easymotion-prev)
 
 let g:ctrlp_working_path_mode = 'ra'
 
-" =================
-" Quick-Scope Mappings
-" =================
-
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
 
 " =================
 " Limelight Mappings
