@@ -21,7 +21,6 @@ brew install zsh
 Edit /etc/shells and add "/usr/local/bin/zsh" to the end of the file
 Then run:
 
-brew install zsh
 chsh -s /usr/local/bin/zsh
 
 Fonts
