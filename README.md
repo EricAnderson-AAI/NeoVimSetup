@@ -12,6 +12,7 @@ NeoVim Important Information
 ====================
 
 Default user config directory is now ~/.config/nvim/
+
 Default "vimrc" location is now ~/.config/nvim/init.vim
 
 Command: mv ~/.nvimrc ~/.config/nvim/init.vim
