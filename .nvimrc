@@ -184,6 +184,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " =====================================
 
 let mapleader=','
+" Map 'jk' to Esc key
+inoremap jk <esc>
 " Toggle Nerdtree with F2
 nnoremap <F2> :NERDTreeToggle<CR>
 " Edit .vimrc
