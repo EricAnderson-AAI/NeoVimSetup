@@ -71,3 +71,32 @@ Command - "_dd
 -- Jump to the start and end of a code block --
 
 command - [ or ] then the given brace e.g. {()}
+
+-- Tabs --
+
+List all tabs - :tabs
+Next tab - :gt
+Previous tab - :gT
+Create a new tab - :tab split
+Close current tab - :tabclose
+Close all other tabs - :tabonly
+
+-- Turn off highlighting until the next search --
+
+Command - :noh
+//
+// Buffergator
+//
+
+-- List buffergator commands --
+
+:h buffer-list
+
+-- Buffer Navigation --
+
+Next buffer - :bn
+Previous buffer - :bp
+Close buffers - :bd
+Split next buffer horizontally - :sbn
+Split next buffer vertically - :sbn
+

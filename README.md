@@ -8,6 +8,14 @@ NeoVim Python Commands
 
 [NeoVim Commands](https://neovim.io/doc/user/nvim_python.html)
 
+NeoVim Important Information
+====================
+
+Default user config directory is now ~/.config/nvim/
+Default "vimrc" location is now ~/.config/nvim/init.vim
+
+Command: mv ~/.nvimrc ~/.config/nvim/init.vim
+
 iTerm2 Theme Install
 ====================
 
