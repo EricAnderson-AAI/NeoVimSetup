@@ -1,5 +1,5 @@
 " Maintainer:   Eric Anderson <http://twitter.com/evlsnoopy>
-" Version:      0.1
+" Version:      0.2
 
 scriptencoding utf-8
 
@@ -36,6 +36,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-unimpaired'
 " Airline statusline
 Plug 'bling/vim-airline'
+" Airline Themes
+Plug 'vim-airline/vim-airline-themes'
 " NeoVim Syntax Checking
 Plug 'benekastah/neomake'
 " Teach a man to Fish
@@ -77,8 +79,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ryanoasis/vim-devicons'
 " Fuzzy finder
 Plug 'kien/ctrlp.vim'
-" Gotham theme
-Plug 'whatyouhide/vim-gotham'
 " Select and switch between buffers
 Plug 'jeetsukumaran/vim-buffergator'
 " Display tags in a side window
@@ -87,6 +87,25 @@ Plug 'majutsushi/tagbar'
 Plug 'unblevable/quick-scope'
 " Hyperfocus writing
 Plug 'junegunn/limelight.vim'
+" Elixir for vim
+Plug 'elixir-lang/vim-elixir'
+
+"
+" Themes
+"
+Plug 'flazz/vim-colorschemes'
+Plug 'nickburlett/vim-colors-stylus'
+
+
+let g:stylus_neutral_code_bg = 0 " 0 = gray (default), 1 = normal"
+let g:stylus_higher_contrast_ui = 1 " 0 = low (default), 1 = high"
+
+
+
+
+" =====================================
+" Airline Settings
+" =====================================
 
 call plug#end()
 
@@ -150,28 +169,38 @@ nmap <F8> :TagbarToggle<CR>
 " ==========
 
 set hlsearch
+
+" The default theme that is used by Airline is dark or light,
+" depending on whether the background is set to dark or light
 set background=dark
+
 set number
 
-set cursorline
-hi CursorLine ctermbg=Yellow guibg=Yellow
-hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
-hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
-
+" set cursorline
 " Set cursorline colors
 " hi CursorLine ctermbg=lightblue guibg=lightblue
+" hi CursorLine ctermbg=Yellow guibg=Yellow
+
+" hi Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
+" hi CursorColumn ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold
 
 " Access colors present in 256 colorspace
-let base16colorspace=256
-" colorscheme base16-atelierforest
-colorscheme gotham256
+" let base16colorspace=256
 
 " Powerline font & symbol integration
 let g:airline_powerline_fonts = 1
 
 " =====================================
+" Code color Settings
+" =====================================
+colorscheme stylus
+
+" =====================================
 " Airline Settings
 " =====================================
+
+" Enable Airline Theme
+let g:airline_theme='base16'
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -184,6 +213,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " =====================================
 
 let mapleader=','
+set tabstop=4
+set shiftwidth=4
 " Map 'jk' to Esc key
 inoremap jk <esc>
 " Toggle Nerdtree with F2
